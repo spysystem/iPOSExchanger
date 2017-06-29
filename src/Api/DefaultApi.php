@@ -102,6 +102,216 @@ class DefaultApi
     }
 
     /**
+     * Operation createDelivery
+     *
+     * Creates a new Delivery
+     *
+     * @param string $strService Target Service in FileMaker (required)
+     * @param \iPOS\Model\DeliveryObject $data Record to be created (optional)
+     * @throws \iPOS\ApiException on non-2xx response
+     * @return \iPOS\Model\CreateResponse
+     */
+    public function createDelivery($strService, $data = null)
+    {
+        list($response) = $this->createDeliveryWithHttpInfo($strService, $data);
+        return $response;
+    }
+
+    /**
+     * Operation createDeliveryWithHttpInfo
+     *
+     * Creates a new Delivery
+     *
+     * @param string $strService Target Service in FileMaker (required)
+     * @param \iPOS\Model\DeliveryObject $data Record to be created (optional)
+     * @throws \iPOS\ApiException on non-2xx response
+     * @return array of \iPOS\Model\CreateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createDeliveryWithHttpInfo($strService, $data = null)
+    {
+        // verify the required parameter 'strService' is set
+        if ($strService === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $strService when calling createDelivery');
+        }
+        // parse inputs
+        $resourcePath = "/record/{strService}/api_SPY_Varemodtagelse";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($strService !== null) {
+            $resourcePath = str_replace(
+                "{" . "strService" . "}",
+                $this->apiClient->getSerializer()->toPathValue($strService),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('FM-data-token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['FM-data-token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\iPOS\Model\CreateResponse',
+                '/record/{strService}/api_SPY_Varemodtagelse'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\iPOS\Model\CreateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\CreateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\ErrorResponseObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 477:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\ErrorResponseObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createDeliveryLine
+     *
+     * Creates a new Delivery Line
+     *
+     * @param string $strService Target Service in FileMaker (required)
+     * @param \iPOS\Model\DeliveryLineObject $data Record to be created (optional)
+     * @throws \iPOS\ApiException on non-2xx response
+     * @return \iPOS\Model\CreateResponse
+     */
+    public function createDeliveryLine($strService, $data = null)
+    {
+        list($response) = $this->createDeliveryLineWithHttpInfo($strService, $data);
+        return $response;
+    }
+
+    /**
+     * Operation createDeliveryLineWithHttpInfo
+     *
+     * Creates a new Delivery Line
+     *
+     * @param string $strService Target Service in FileMaker (required)
+     * @param \iPOS\Model\DeliveryLineObject $data Record to be created (optional)
+     * @throws \iPOS\ApiException on non-2xx response
+     * @return array of \iPOS\Model\CreateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createDeliveryLineWithHttpInfo($strService, $data = null)
+    {
+        // verify the required parameter 'strService' is set
+        if ($strService === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $strService when calling createDeliveryLine');
+        }
+        // parse inputs
+        $resourcePath = "/record/{strService}/api_SPY_Varemodtagelse_linie";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($strService !== null) {
+            $resourcePath = str_replace(
+                "{" . "strService" . "}",
+                $this->apiClient->getSerializer()->toPathValue($strService),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('FM-data-token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['FM-data-token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\iPOS\Model\CreateResponse',
+                '/record/{strService}/api_SPY_Varemodtagelse_linie'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\iPOS\Model\CreateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\CreateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\ErrorResponseObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 477:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\iPOS\Model\ErrorResponseObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createProduct
      *
      * Creates a new product

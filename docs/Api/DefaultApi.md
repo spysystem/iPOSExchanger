@@ -4,6 +4,8 @@ All URIs are relative to *https://fm.macpartner.dk/fmr/rest/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createDelivery**](DefaultApi.md#createDelivery) | **POST** /record/{strService}/api_SPY_Varemodtagelse | Creates a new Delivery
+[**createDeliveryLine**](DefaultApi.md#createDeliveryLine) | **POST** /record/{strService}/api_SPY_Varemodtagelse_linie | Creates a new Delivery Line
 [**createProduct**](DefaultApi.md#createProduct) | **POST** /record/{strService}/api_SPY_varer | Creates a new product
 [**createProductType**](DefaultApi.md#createProductType) | **POST** /record/{strService}/api_SPY_varegrupper | Creates a new product type
 [**findProductByEAN**](DefaultApi.md#findProductByEAN) | **POST** /find/{strService}/api_SPY_varer | finds a product based on its EAN code
@@ -17,6 +19,106 @@ Method | HTTP request | Description
 [**markSalesReportAsRead**](DefaultApi.md#markSalesReportAsRead) | **PUT** /record/{strService}/api_SPY_Sale/{iRecordID} | Marks a Sales Report line as Read
 [**updateProduct**](DefaultApi.md#updateProduct) | **PUT** /record/{strService}/api_SPY_varer/{iRecordID} | Updates a product
 
+
+# **createDelivery**
+> \iPOS\Model\CreateResponse createDelivery($strService, $data)
+
+Creates a new Delivery
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiKeyAuth
+iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+
+$api_instance = new iPOS\Api\DefaultApi();
+$strService = "strService_example"; // string | Target Service in FileMaker
+$data = new \iPOS\Model\DeliveryObject(); // \iPOS\Model\DeliveryObject | Record to be created
+
+try {
+    $result = $api_instance->createDelivery($strService, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->createDelivery: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **strService** | **string**| Target Service in FileMaker |
+ **data** | [**\iPOS\Model\DeliveryObject**](../Model/\iPOS\Model\DeliveryObject.md)| Record to be created | [optional]
+
+### Return type
+
+[**\iPOS\Model\CreateResponse**](../Model/CreateResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createDeliveryLine**
+> \iPOS\Model\CreateResponse createDeliveryLine($strService, $data)
+
+Creates a new Delivery Line
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiKeyAuth
+iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+
+$api_instance = new iPOS\Api\DefaultApi();
+$strService = "strService_example"; // string | Target Service in FileMaker
+$data = new \iPOS\Model\DeliveryLineObject(); // \iPOS\Model\DeliveryLineObject | Record to be created
+
+try {
+    $result = $api_instance->createDeliveryLine($strService, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->createDeliveryLine: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **strService** | **string**| Target Service in FileMaker |
+ **data** | [**\iPOS\Model\DeliveryLineObject**](../Model/\iPOS\Model\DeliveryLineObject.md)| Record to be created | [optional]
+
+### Return type
+
+[**\iPOS\Model\CreateResponse**](../Model/CreateResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createProduct**
 > \iPOS\Model\CreateResponse createProduct($strService, $data)

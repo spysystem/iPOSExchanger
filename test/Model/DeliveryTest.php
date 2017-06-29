@@ -1,6 +1,6 @@
 <?php
 /**
- * SalesReportTest
+ * DeliveryTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace iPOS;
 
 /**
- * SalesReportTest Class Doc Comment
+ * DeliveryTest Class Doc Comment
  *
  * @category    Class */
-// * @description SalesReport
+// * @description Delivery
 /**
  * @package     iPOS
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SalesReportTest extends \PHPUnit_Framework_TestCase
+class DeliveryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,17 @@ class SalesReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SalesReport"
+     * Test "Delivery"
      */
-    public function testSalesReport()
+    public function testDelivery()
     {
 
     }
 
     /**
-     * Test attribute "antal"
+     * Test attribute "idUuid"
      */
-    public function testPropertyAntal()
-    {
-
-    }
-
-    /**
-     * Test attribute "ean"
-     */
-    public function testPropertyEan()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYAPris"
-     */
-    public function testPropertySPYAPris()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYDateSale"
-     */
-    public function testPropertySPYDateSale()
-    {
-
-    }
-
-    /**
-     * Test attribute "lgIkkePLager"
-     */
-    public function testPropertyLgIkkePLager()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYRelevant"
-     */
-    public function testPropertySPYRelevant()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYDone"
-     */
-    public function testPropertySPYDone()
+    public function testPropertyIdUuid()
     {
 
     }
@@ -155,6 +107,14 @@ class SalesReportTest extends \PHPUnit_Framework_TestCase
      * Test attribute "idLokation"
      */
     public function testPropertyIdLokation()
+    {
+
+    }
+
+    /**
+     * Test attribute "datoOpr"
+     */
+    public function testPropertyDatoOpr()
     {
 
     }

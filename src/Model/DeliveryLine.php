@@ -1,6 +1,6 @@
 <?php
 /**
- * SalesReport
+ * DeliveryLine
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace iPOS\Model;
 use \ArrayAccess;
 
 /**
- * SalesReport Class Doc Comment
+ * DeliveryLine Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,27 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SalesReport implements ArrayAccess
+class DeliveryLine implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SalesReport';
+    protected static $swaggerModelName = 'DeliveryLine';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'antal' => 'string',
-        'ean' => 'string',
-        'sPYAPris' => 'string',
-        'sPYDateSale' => 'string',
-        'lgIkkePLager' => 'string',
-        'sPYRelevant' => 'string',
-        'sPYDone' => 'string',
-        'idLokation' => 'string'
+        'idVaremodtagelse' => 'string',
+        'eAN' => 'string',
+        'antalModtaget' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -86,14 +81,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'antal' => 'Antal',
-        'ean' => 'ean',
-        'sPYAPris' => 'SPY_a_pris',
-        'sPYDateSale' => 'SPY_date_sale',
-        'lgIkkePLager' => 'Læg_ikke_på_lager',
-        'sPYRelevant' => 'SPY_relevant',
-        'sPYDone' => 'SPY_done',
-        'idLokation' => 'id_lokation'
+        'idVaremodtagelse' => 'id_varemodtagelse',
+        'eAN' => 'EAN',
+        'antalModtaget' => 'Antal_modtaget'
     ];
 
 
@@ -102,14 +92,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'antal' => 'setAntal',
-        'ean' => 'setEan',
-        'sPYAPris' => 'setSPYAPris',
-        'sPYDateSale' => 'setSPYDateSale',
-        'lgIkkePLager' => 'setLgIkkePLager',
-        'sPYRelevant' => 'setSPYRelevant',
-        'sPYDone' => 'setSPYDone',
-        'idLokation' => 'setIdLokation'
+        'idVaremodtagelse' => 'setIdVaremodtagelse',
+        'eAN' => 'setEAN',
+        'antalModtaget' => 'setAntalModtaget'
     ];
 
 
@@ -118,14 +103,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'antal' => 'getAntal',
-        'ean' => 'getEan',
-        'sPYAPris' => 'getSPYAPris',
-        'sPYDateSale' => 'getSPYDateSale',
-        'lgIkkePLager' => 'getLgIkkePLager',
-        'sPYRelevant' => 'getSPYRelevant',
-        'sPYDone' => 'getSPYDone',
-        'idLokation' => 'getIdLokation'
+        'idVaremodtagelse' => 'getIdVaremodtagelse',
+        'eAN' => 'getEAN',
+        'antalModtaget' => 'getAntalModtaget'
     ];
 
     public static function attributeMap()
@@ -159,14 +139,9 @@ class SalesReport implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['antal'] = isset($data['antal']) ? $data['antal'] : null;
-        $this->container['ean'] = isset($data['ean']) ? $data['ean'] : null;
-        $this->container['sPYAPris'] = isset($data['sPYAPris']) ? $data['sPYAPris'] : null;
-        $this->container['sPYDateSale'] = isset($data['sPYDateSale']) ? $data['sPYDateSale'] : null;
-        $this->container['lgIkkePLager'] = isset($data['lgIkkePLager']) ? $data['lgIkkePLager'] : null;
-        $this->container['sPYRelevant'] = isset($data['sPYRelevant']) ? $data['sPYRelevant'] : null;
-        $this->container['sPYDone'] = isset($data['sPYDone']) ? $data['sPYDone'] : null;
-        $this->container['idLokation'] = isset($data['idLokation']) ? $data['idLokation'] : null;
+        $this->container['idVaremodtagelse'] = isset($data['idVaremodtagelse']) ? $data['idVaremodtagelse'] : null;
+        $this->container['eAN'] = isset($data['eAN']) ? $data['eAN'] : null;
+        $this->container['antalModtaget'] = isset($data['antalModtaget']) ? $data['antalModtaget'] : null;
     }
 
     /**
@@ -193,169 +168,64 @@ class SalesReport implements ArrayAccess
 
 
     /**
-     * Gets antal
+     * Gets idVaremodtagelse
      * @return string
      */
-    public function getAntal()
+    public function getIdVaremodtagelse()
     {
-        return $this->container['antal'];
+        return $this->container['idVaremodtagelse'];
     }
 
     /**
-     * Sets antal
-     * @param string $antal
+     * Sets idVaremodtagelse
+     * @param string $idVaremodtagelse
      * @return $this
      */
-    public function setAntal($antal)
+    public function setIdVaremodtagelse($idVaremodtagelse)
     {
-        $this->container['antal'] = $antal;
+        $this->container['idVaremodtagelse'] = $idVaremodtagelse;
 
         return $this;
     }
 
     /**
-     * Gets ean
+     * Gets eAN
      * @return string
      */
-    public function getEan()
+    public function getEAN()
     {
-        return $this->container['ean'];
+        return $this->container['eAN'];
     }
 
     /**
-     * Sets ean
-     * @param string $ean
+     * Sets eAN
+     * @param string $eAN
      * @return $this
      */
-    public function setEan($ean)
+    public function setEAN($eAN)
     {
-        $this->container['ean'] = $ean;
+        $this->container['eAN'] = $eAN;
 
         return $this;
     }
 
     /**
-     * Gets sPYAPris
+     * Gets antalModtaget
      * @return string
      */
-    public function getSPYAPris()
+    public function getAntalModtaget()
     {
-        return $this->container['sPYAPris'];
+        return $this->container['antalModtaget'];
     }
 
     /**
-     * Sets sPYAPris
-     * @param string $sPYAPris
+     * Sets antalModtaget
+     * @param string $antalModtaget
      * @return $this
      */
-    public function setSPYAPris($sPYAPris)
+    public function setAntalModtaget($antalModtaget)
     {
-        $this->container['sPYAPris'] = $sPYAPris;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYDateSale
-     * @return string
-     */
-    public function getSPYDateSale()
-    {
-        return $this->container['sPYDateSale'];
-    }
-
-    /**
-     * Sets sPYDateSale
-     * @param string $sPYDateSale
-     * @return $this
-     */
-    public function setSPYDateSale($sPYDateSale)
-    {
-        $this->container['sPYDateSale'] = $sPYDateSale;
-
-        return $this;
-    }
-
-    /**
-     * Gets lgIkkePLager
-     * @return string
-     */
-    public function getLgIkkePLager()
-    {
-        return $this->container['lgIkkePLager'];
-    }
-
-    /**
-     * Sets lgIkkePLager
-     * @param string $lgIkkePLager
-     * @return $this
-     */
-    public function setLgIkkePLager($lgIkkePLager)
-    {
-        $this->container['lgIkkePLager'] = $lgIkkePLager;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYRelevant
-     * @return string
-     */
-    public function getSPYRelevant()
-    {
-        return $this->container['sPYRelevant'];
-    }
-
-    /**
-     * Sets sPYRelevant
-     * @param string $sPYRelevant
-     * @return $this
-     */
-    public function setSPYRelevant($sPYRelevant)
-    {
-        $this->container['sPYRelevant'] = $sPYRelevant;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYDone
-     * @return string
-     */
-    public function getSPYDone()
-    {
-        return $this->container['sPYDone'];
-    }
-
-    /**
-     * Sets sPYDone
-     * @param string $sPYDone
-     * @return $this
-     */
-    public function setSPYDone($sPYDone)
-    {
-        $this->container['sPYDone'] = $sPYDone;
-
-        return $this;
-    }
-
-    /**
-     * Gets idLokation
-     * @return string
-     */
-    public function getIdLokation()
-    {
-        return $this->container['idLokation'];
-    }
-
-    /**
-     * Sets idLokation
-     * @param string $idLokation
-     * @return $this
-     */
-    public function setIdLokation($idLokation)
-    {
-        $this->container['idLokation'] = $idLokation;
+        $this->container['antalModtaget'] = $antalModtaget;
 
         return $this;
     }

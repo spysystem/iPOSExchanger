@@ -90,6 +90,28 @@ class DefaultApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createDelivery
+     *
+     * Creates a new Delivery.
+     *
+     */
+    public function testCreateDelivery()
+    {
+
+    }
+
+    /**
+     * Test case for createDeliveryLine
+     *
+     * Creates a new Delivery Line.
+     *
+     */
+    public function testCreateDeliveryLine()
+    {
+
+    }
+
+    /**
      * Test case for createProduct
      *
      * Creates a new product.

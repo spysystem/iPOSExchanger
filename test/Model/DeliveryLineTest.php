@@ -1,6 +1,6 @@
 <?php
 /**
- * SalesReportTest
+ * DeliveryLineTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace iPOS;
 
 /**
- * SalesReportTest Class Doc Comment
+ * DeliveryLineTest Class Doc Comment
  *
  * @category    Class */
-// * @description SalesReport
+// * @description DeliveryLine
 /**
  * @package     iPOS
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SalesReportTest extends \PHPUnit_Framework_TestCase
+class DeliveryLineTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,73 +88,33 @@ class SalesReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SalesReport"
+     * Test "DeliveryLine"
      */
-    public function testSalesReport()
+    public function testDeliveryLine()
     {
 
     }
 
     /**
-     * Test attribute "antal"
+     * Test attribute "idVaremodtagelse"
      */
-    public function testPropertyAntal()
+    public function testPropertyIdVaremodtagelse()
     {
 
     }
 
     /**
-     * Test attribute "ean"
+     * Test attribute "eAN"
      */
-    public function testPropertyEan()
+    public function testPropertyEAN()
     {
 
     }
 
     /**
-     * Test attribute "sPYAPris"
+     * Test attribute "antalModtaget"
      */
-    public function testPropertySPYAPris()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYDateSale"
-     */
-    public function testPropertySPYDateSale()
-    {
-
-    }
-
-    /**
-     * Test attribute "lgIkkePLager"
-     */
-    public function testPropertyLgIkkePLager()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYRelevant"
-     */
-    public function testPropertySPYRelevant()
-    {
-
-    }
-
-    /**
-     * Test attribute "sPYDone"
-     */
-    public function testPropertySPYDone()
-    {
-
-    }
-
-    /**
-     * Test attribute "idLokation"
-     */
-    public function testPropertyIdLokation()
+    public function testPropertyAntalModtaget()
     {
 
     }

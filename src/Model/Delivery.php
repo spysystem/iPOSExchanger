@@ -1,6 +1,6 @@
 <?php
 /**
- * SalesReport
+ * Delivery
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace iPOS\Model;
 use \ArrayAccess;
 
 /**
- * SalesReport Class Doc Comment
+ * Delivery Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,27 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SalesReport implements ArrayAccess
+class Delivery implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SalesReport';
+    protected static $swaggerModelName = 'Delivery';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'antal' => 'string',
-        'ean' => 'string',
-        'sPYAPris' => 'string',
-        'sPYDateSale' => 'string',
-        'lgIkkePLager' => 'string',
-        'sPYRelevant' => 'string',
-        'sPYDone' => 'string',
-        'idLokation' => 'string'
+        'idUuid' => 'string',
+        'idLokation' => 'string',
+        'datoOpr' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -86,14 +81,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'antal' => 'Antal',
-        'ean' => 'ean',
-        'sPYAPris' => 'SPY_a_pris',
-        'sPYDateSale' => 'SPY_date_sale',
-        'lgIkkePLager' => 'Læg_ikke_på_lager',
-        'sPYRelevant' => 'SPY_relevant',
-        'sPYDone' => 'SPY_done',
-        'idLokation' => 'id_lokation'
+        'idUuid' => 'id_uuid',
+        'idLokation' => 'id_lokation',
+        'datoOpr' => 'Dato_opr'
     ];
 
 
@@ -102,14 +92,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'antal' => 'setAntal',
-        'ean' => 'setEan',
-        'sPYAPris' => 'setSPYAPris',
-        'sPYDateSale' => 'setSPYDateSale',
-        'lgIkkePLager' => 'setLgIkkePLager',
-        'sPYRelevant' => 'setSPYRelevant',
-        'sPYDone' => 'setSPYDone',
-        'idLokation' => 'setIdLokation'
+        'idUuid' => 'setIdUuid',
+        'idLokation' => 'setIdLokation',
+        'datoOpr' => 'setDatoOpr'
     ];
 
 
@@ -118,14 +103,9 @@ class SalesReport implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'antal' => 'getAntal',
-        'ean' => 'getEan',
-        'sPYAPris' => 'getSPYAPris',
-        'sPYDateSale' => 'getSPYDateSale',
-        'lgIkkePLager' => 'getLgIkkePLager',
-        'sPYRelevant' => 'getSPYRelevant',
-        'sPYDone' => 'getSPYDone',
-        'idLokation' => 'getIdLokation'
+        'idUuid' => 'getIdUuid',
+        'idLokation' => 'getIdLokation',
+        'datoOpr' => 'getDatoOpr'
     ];
 
     public static function attributeMap()
@@ -159,14 +139,9 @@ class SalesReport implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['antal'] = isset($data['antal']) ? $data['antal'] : null;
-        $this->container['ean'] = isset($data['ean']) ? $data['ean'] : null;
-        $this->container['sPYAPris'] = isset($data['sPYAPris']) ? $data['sPYAPris'] : null;
-        $this->container['sPYDateSale'] = isset($data['sPYDateSale']) ? $data['sPYDateSale'] : null;
-        $this->container['lgIkkePLager'] = isset($data['lgIkkePLager']) ? $data['lgIkkePLager'] : null;
-        $this->container['sPYRelevant'] = isset($data['sPYRelevant']) ? $data['sPYRelevant'] : null;
-        $this->container['sPYDone'] = isset($data['sPYDone']) ? $data['sPYDone'] : null;
+        $this->container['idUuid'] = isset($data['idUuid']) ? $data['idUuid'] : null;
         $this->container['idLokation'] = isset($data['idLokation']) ? $data['idLokation'] : null;
+        $this->container['datoOpr'] = isset($data['datoOpr']) ? $data['datoOpr'] : null;
     }
 
     /**
@@ -193,148 +168,22 @@ class SalesReport implements ArrayAccess
 
 
     /**
-     * Gets antal
+     * Gets idUuid
      * @return string
      */
-    public function getAntal()
+    public function getIdUuid()
     {
-        return $this->container['antal'];
+        return $this->container['idUuid'];
     }
 
     /**
-     * Sets antal
-     * @param string $antal
+     * Sets idUuid
+     * @param string $idUuid
      * @return $this
      */
-    public function setAntal($antal)
+    public function setIdUuid($idUuid)
     {
-        $this->container['antal'] = $antal;
-
-        return $this;
-    }
-
-    /**
-     * Gets ean
-     * @return string
-     */
-    public function getEan()
-    {
-        return $this->container['ean'];
-    }
-
-    /**
-     * Sets ean
-     * @param string $ean
-     * @return $this
-     */
-    public function setEan($ean)
-    {
-        $this->container['ean'] = $ean;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYAPris
-     * @return string
-     */
-    public function getSPYAPris()
-    {
-        return $this->container['sPYAPris'];
-    }
-
-    /**
-     * Sets sPYAPris
-     * @param string $sPYAPris
-     * @return $this
-     */
-    public function setSPYAPris($sPYAPris)
-    {
-        $this->container['sPYAPris'] = $sPYAPris;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYDateSale
-     * @return string
-     */
-    public function getSPYDateSale()
-    {
-        return $this->container['sPYDateSale'];
-    }
-
-    /**
-     * Sets sPYDateSale
-     * @param string $sPYDateSale
-     * @return $this
-     */
-    public function setSPYDateSale($sPYDateSale)
-    {
-        $this->container['sPYDateSale'] = $sPYDateSale;
-
-        return $this;
-    }
-
-    /**
-     * Gets lgIkkePLager
-     * @return string
-     */
-    public function getLgIkkePLager()
-    {
-        return $this->container['lgIkkePLager'];
-    }
-
-    /**
-     * Sets lgIkkePLager
-     * @param string $lgIkkePLager
-     * @return $this
-     */
-    public function setLgIkkePLager($lgIkkePLager)
-    {
-        $this->container['lgIkkePLager'] = $lgIkkePLager;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYRelevant
-     * @return string
-     */
-    public function getSPYRelevant()
-    {
-        return $this->container['sPYRelevant'];
-    }
-
-    /**
-     * Sets sPYRelevant
-     * @param string $sPYRelevant
-     * @return $this
-     */
-    public function setSPYRelevant($sPYRelevant)
-    {
-        $this->container['sPYRelevant'] = $sPYRelevant;
-
-        return $this;
-    }
-
-    /**
-     * Gets sPYDone
-     * @return string
-     */
-    public function getSPYDone()
-    {
-        return $this->container['sPYDone'];
-    }
-
-    /**
-     * Sets sPYDone
-     * @param string $sPYDone
-     * @return $this
-     */
-    public function setSPYDone($sPYDone)
-    {
-        $this->container['sPYDone'] = $sPYDone;
+        $this->container['idUuid'] = $idUuid;
 
         return $this;
     }
@@ -356,6 +205,27 @@ class SalesReport implements ArrayAccess
     public function setIdLokation($idLokation)
     {
         $this->container['idLokation'] = $idLokation;
+
+        return $this;
+    }
+
+    /**
+     * Gets datoOpr
+     * @return string
+     */
+    public function getDatoOpr()
+    {
+        return $this->container['datoOpr'];
+    }
+
+    /**
+     * Sets datoOpr
+     * @param string $datoOpr
+     * @return $this
+     */
+    public function setDatoOpr($datoOpr)
+    {
+        $this->container['datoOpr'] = $datoOpr;
 
         return $this;
     }
