@@ -104,9 +104,9 @@ class DeliveryLineTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "eAN"
+     * Test attribute "idVare"
      */
-    public function testPropertyEAN()
+    public function testPropertyIdVare()
     {
 
     }

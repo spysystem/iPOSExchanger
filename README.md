@@ -63,13 +63,13 @@ iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_
 
 $api_instance = new iPOS\Api\DefaultApi();
 $strService = "strService_example"; // string | Target Service in FileMaker
-$data = new \iPOS\Model\ProductObject(); // \iPOS\Model\ProductObject | Record to be created
+$data = new \iPOS\Model\DeliveryObject(); // \iPOS\Model\DeliveryObject | Record to be created
 
 try {
-    $result = $api_instance->createProduct($strService, $data);
+    $result = $api_instance->createDelivery($strService, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->createProduct: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->createDelivery: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -81,6 +81,8 @@ All URIs are relative to *https://fm.macpartner.dk/fmr/rest/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**createDelivery**](docs/Api/DefaultApi.md#createdelivery) | **POST** /record/{strService}/api_SPY_Varemodtagelse | Creates a new Delivery
+*DefaultApi* | [**createDeliveryLine**](docs/Api/DefaultApi.md#createdeliveryline) | **POST** /record/{strService}/api_SPY_Varemodtagelse_linie | Creates a new Delivery Line
 *DefaultApi* | [**createProduct**](docs/Api/DefaultApi.md#createproduct) | **POST** /record/{strService}/api_SPY_varer | Creates a new product
 *DefaultApi* | [**createProductType**](docs/Api/DefaultApi.md#createproducttype) | **POST** /record/{strService}/api_SPY_varegrupper | Creates a new product type
 *DefaultApi* | [**findProductByEAN**](docs/Api/DefaultApi.md#findproductbyean) | **POST** /find/{strService}/api_SPY_varer | finds a product based on its EAN code
@@ -100,6 +102,10 @@ Class | Method | HTTP request | Description
  - [AuthenticationObject](docs/Model/AuthenticationObject.md)
  - [AuthenticationResponseObject](docs/Model/AuthenticationResponseObject.md)
  - [CreateResponse](docs/Model/CreateResponse.md)
+ - [Delivery](docs/Model/Delivery.md)
+ - [DeliveryLine](docs/Model/DeliveryLine.md)
+ - [DeliveryLineObject](docs/Model/DeliveryLineObject.md)
+ - [DeliveryObject](docs/Model/DeliveryObject.md)
  - [ErrorResponseObject](docs/Model/ErrorResponseObject.md)
  - [Product](docs/Model/Product.md)
  - [ProductObject](docs/Model/ProductObject.md)

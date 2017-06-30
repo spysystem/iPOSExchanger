@@ -67,10 +67,13 @@ class DeliveryLine implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'idVaremodtagelse' => 'string',
-        'eAN' => 'string',
+        'idVare' => 'string',
         'antalModtaget' => 'string'
     ];
 
+    /**
+     * @return \string[]
+     */
     public static function swaggerTypes()
     {
         return self::$swaggerTypes;
@@ -82,7 +85,7 @@ class DeliveryLine implements ArrayAccess
      */
     protected static $attributeMap = [
         'idVaremodtagelse' => 'id_varemodtagelse',
-        'eAN' => 'EAN',
+        'idVare' => 'id_vare',
         'antalModtaget' => 'Antal_modtaget'
     ];
 
@@ -93,7 +96,7 @@ class DeliveryLine implements ArrayAccess
      */
     protected static $setters = [
         'idVaremodtagelse' => 'setIdVaremodtagelse',
-        'eAN' => 'setEAN',
+        'idVare' => 'setIdVare',
         'antalModtaget' => 'setAntalModtaget'
     ];
 
@@ -104,20 +107,29 @@ class DeliveryLine implements ArrayAccess
      */
     protected static $getters = [
         'idVaremodtagelse' => 'getIdVaremodtagelse',
-        'eAN' => 'getEAN',
+        'idVare' => 'getIdVare',
         'antalModtaget' => 'getAntalModtaget'
     ];
 
+    /**
+     * @return \string[]
+     */
     public static function attributeMap()
     {
         return self::$attributeMap;
     }
 
+    /**
+     * @return \string[]
+     */
     public static function setters()
     {
         return self::$setters;
     }
 
+    /**
+     * @return \string[]
+     */
     public static function getters()
     {
         return self::$getters;
@@ -140,7 +152,7 @@ class DeliveryLine implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['idVaremodtagelse'] = isset($data['idVaremodtagelse']) ? $data['idVaremodtagelse'] : null;
-        $this->container['eAN'] = isset($data['eAN']) ? $data['eAN'] : null;
+        $this->container['idVare'] = isset($data['idVare']) ? $data['idVare'] : null;
         $this->container['antalModtaget'] = isset($data['antalModtaget']) ? $data['antalModtaget'] : null;
     }
 
@@ -189,22 +201,22 @@ class DeliveryLine implements ArrayAccess
     }
 
     /**
-     * Gets eAN
+     * Gets idVare
      * @return string
      */
-    public function getEAN()
+    public function getIdVare()
     {
-        return $this->container['eAN'];
+        return $this->container['idVare'];
     }
 
     /**
-     * Sets eAN
-     * @param string $eAN
+     * Sets idVare
+     * @param string $idVare
      * @return $this
      */
-    public function setEAN($eAN)
+    public function setIdVare($idVare)
     {
-        $this->container['eAN'] = $eAN;
+        $this->container['idVare'] = $idVare;
 
         return $this;
     }
