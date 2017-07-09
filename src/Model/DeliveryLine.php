@@ -71,9 +71,6 @@ class DeliveryLine implements ArrayAccess
         'antalModtaget' => 'string'
     ];
 
-    /**
-     * @return \string[]
-     */
     public static function swaggerTypes()
     {
         return self::$swaggerTypes;
@@ -111,25 +108,16 @@ class DeliveryLine implements ArrayAccess
         'antalModtaget' => 'getAntalModtaget'
     ];
 
-    /**
-     * @return \string[]
-     */
     public static function attributeMap()
     {
         return self::$attributeMap;
     }
 
-    /**
-     * @return \string[]
-     */
     public static function setters()
     {
         return self::$setters;
     }
 
-    /**
-     * @return \string[]
-     */
     public static function getters()
     {
         return self::$getters;

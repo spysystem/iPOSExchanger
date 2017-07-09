@@ -95,7 +95,7 @@ class Product implements ArrayAccess
         'eANNr' => 'EAN nr',
         'varetekst' => 'Varetekst',
         'vareBeskrivelse' => 'VareBeskrivelse',
-        'varenrLeverandr' => 'Varenr Leverandør',
+        'varenrLeverandr' => 'Varenr_Leverandør',
         'salgspris' => 'Salgspris',
         'salgsprisInclMoms' => 'Salgspris Incl moms',
         'kostpris' => 'Kostpris',
