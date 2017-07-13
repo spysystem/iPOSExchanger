@@ -68,7 +68,8 @@ class DeliveryLine implements ArrayAccess
     protected static $swaggerTypes = [
         'idVaremodtagelse' => 'string',
         'idVare' => 'string',
-        'antalModtaget' => 'string'
+        'antalModtaget' => 'string',
+        'eAN' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class DeliveryLine implements ArrayAccess
     protected static $attributeMap = [
         'idVaremodtagelse' => 'id_varemodtagelse',
         'idVare' => 'id_vare',
-        'antalModtaget' => 'Antal_modtaget'
+        'antalModtaget' => 'Antal_modtaget',
+        'eAN' => 'EAN'
     ];
 
 
@@ -94,7 +96,8 @@ class DeliveryLine implements ArrayAccess
     protected static $setters = [
         'idVaremodtagelse' => 'setIdVaremodtagelse',
         'idVare' => 'setIdVare',
-        'antalModtaget' => 'setAntalModtaget'
+        'antalModtaget' => 'setAntalModtaget',
+        'eAN' => 'setEAN'
     ];
 
 
@@ -105,7 +108,8 @@ class DeliveryLine implements ArrayAccess
     protected static $getters = [
         'idVaremodtagelse' => 'getIdVaremodtagelse',
         'idVare' => 'getIdVare',
-        'antalModtaget' => 'getAntalModtaget'
+        'antalModtaget' => 'getAntalModtaget',
+        'eAN' => 'getEAN'
     ];
 
     public static function attributeMap()
@@ -142,6 +146,7 @@ class DeliveryLine implements ArrayAccess
         $this->container['idVaremodtagelse'] = isset($data['idVaremodtagelse']) ? $data['idVaremodtagelse'] : null;
         $this->container['idVare'] = isset($data['idVare']) ? $data['idVare'] : null;
         $this->container['antalModtaget'] = isset($data['antalModtaget']) ? $data['antalModtaget'] : null;
+        $this->container['eAN'] = isset($data['eAN']) ? $data['eAN'] : null;
     }
 
     /**
@@ -226,6 +231,27 @@ class DeliveryLine implements ArrayAccess
     public function setAntalModtaget($antalModtaget)
     {
         $this->container['antalModtaget'] = $antalModtaget;
+
+        return $this;
+    }
+
+    /**
+     * Gets eAN
+     * @return string
+     */
+    public function getEAN()
+    {
+        return $this->container['eAN'];
+    }
+
+    /**
+     * Sets eAN
+     * @param string $eAN
+     * @return $this
+     */
+    public function setEAN($eAN)
+    {
+        $this->container['eAN'] = $eAN;
 
         return $this;
     }

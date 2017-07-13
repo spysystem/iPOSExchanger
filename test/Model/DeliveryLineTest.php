@@ -119,4 +119,12 @@ class DeliveryLineTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "eAN"
+     */
+    public function testPropertyEAN()
+    {
+
+    }
+
 }
