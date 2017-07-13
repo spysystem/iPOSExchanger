@@ -120,9 +120,9 @@ class SalesReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sPYDateSale"
+     * Test attribute "uIDatoBon"
      */
-    public function testPropertySPYDateSale()
+    public function testPropertyUIDatoBon()
     {
 
     }

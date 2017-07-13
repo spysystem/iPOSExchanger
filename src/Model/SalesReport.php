@@ -69,7 +69,7 @@ class SalesReport implements ArrayAccess
         'antal' => 'string',
         'ean' => 'string',
         'sPYAPris' => 'string',
-        'sPYDateSale' => 'string',
+        'uIDatoBon' => 'string',
         'lgIkkePLager' => 'string',
         'sPYRelevant' => 'string',
         'sPYDone' => 'string',
@@ -89,7 +89,7 @@ class SalesReport implements ArrayAccess
         'antal' => 'Antal',
         'ean' => 'ean',
         'sPYAPris' => 'SPY_a_pris',
-        'sPYDateSale' => 'SPY_date_sale',
+        'uIDatoBon' => 'UI_dato_bon',
         'lgIkkePLager' => 'Læg_ikke_på_lager',
         'sPYRelevant' => 'SPY_relevant',
         'sPYDone' => 'SPY_done',
@@ -105,7 +105,7 @@ class SalesReport implements ArrayAccess
         'antal' => 'setAntal',
         'ean' => 'setEan',
         'sPYAPris' => 'setSPYAPris',
-        'sPYDateSale' => 'setSPYDateSale',
+        'uIDatoBon' => 'setUIDatoBon',
         'lgIkkePLager' => 'setLgIkkePLager',
         'sPYRelevant' => 'setSPYRelevant',
         'sPYDone' => 'setSPYDone',
@@ -121,7 +121,7 @@ class SalesReport implements ArrayAccess
         'antal' => 'getAntal',
         'ean' => 'getEan',
         'sPYAPris' => 'getSPYAPris',
-        'sPYDateSale' => 'getSPYDateSale',
+        'uIDatoBon' => 'getUIDatoBon',
         'lgIkkePLager' => 'getLgIkkePLager',
         'sPYRelevant' => 'getSPYRelevant',
         'sPYDone' => 'getSPYDone',
@@ -162,7 +162,7 @@ class SalesReport implements ArrayAccess
         $this->container['antal'] = isset($data['antal']) ? $data['antal'] : null;
         $this->container['ean'] = isset($data['ean']) ? $data['ean'] : null;
         $this->container['sPYAPris'] = isset($data['sPYAPris']) ? $data['sPYAPris'] : null;
-        $this->container['sPYDateSale'] = isset($data['sPYDateSale']) ? $data['sPYDateSale'] : null;
+        $this->container['uIDatoBon'] = isset($data['uIDatoBon']) ? $data['uIDatoBon'] : null;
         $this->container['lgIkkePLager'] = isset($data['lgIkkePLager']) ? $data['lgIkkePLager'] : null;
         $this->container['sPYRelevant'] = isset($data['sPYRelevant']) ? $data['sPYRelevant'] : null;
         $this->container['sPYDone'] = isset($data['sPYDone']) ? $data['sPYDone'] : null;
@@ -256,22 +256,22 @@ class SalesReport implements ArrayAccess
     }
 
     /**
-     * Gets sPYDateSale
+     * Gets uIDatoBon
      * @return string
      */
-    public function getSPYDateSale()
+    public function getUIDatoBon()
     {
-        return $this->container['sPYDateSale'];
+        return $this->container['uIDatoBon'];
     }
 
     /**
-     * Sets sPYDateSale
-     * @param string $sPYDateSale
+     * Sets uIDatoBon
+     * @param string $uIDatoBon
      * @return $this
      */
-    public function setSPYDateSale($sPYDateSale)
+    public function setUIDatoBon($uIDatoBon)
     {
-        $this->container['sPYDateSale'] = $sPYDateSale;
+        $this->container['uIDatoBon'] = $uIDatoBon;
 
         return $this;
     }

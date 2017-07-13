@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **antal** | **string** |  | [optional] 
 **ean** | **string** |  | [optional] 
 **sPYAPris** | **string** |  | [optional] 
-**sPYDateSale** | **string** |  | [optional] 
+**uIDatoBon** | **string** |  | [optional] 
 **lgIkkePLager** | **string** |  | [optional] 
 **sPYRelevant** | **string** |  | [optional] 
 **sPYDone** | **string** |  | [optional] 
