@@ -15,7 +15,8 @@ Name | Type | Description | Notes
 **avanceIKr** | **string** | round(sales price - cost price, 2) | [optional] 
 **iDVaregruppe** | **string** | Spy Group ID | [optional] 
 **lagerStatusNskes** | **string** | Always set to 1 | [optional] 
-**varetype** | **string** | always set to indkøb | [optional] 
+**color** | **string** | Color | [optional] 
+**size** | **string** | Color | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

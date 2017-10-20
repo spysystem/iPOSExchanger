@@ -192,9 +192,17 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "varetype"
+     * Test attribute "color"
      */
-    public function testPropertyVaretype()
+    public function testPropertyColor()
+    {
+
+    }
+
+    /**
+     * Test attribute "size"
+     */
+    public function testPropertySize()
     {
 
     }

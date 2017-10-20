@@ -78,7 +78,8 @@ class Product implements ArrayAccess
         'avanceIKr' => 'string',
         'iDVaregruppe' => 'string',
         'lagerStatusNskes' => 'string',
-        'varetype' => 'string'
+        'color' => 'string',
+        'size' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -103,7 +104,8 @@ class Product implements ArrayAccess
         'avanceIKr' => 'Avance i Kr',
         'iDVaregruppe' => 'ID_varegruppe',
         'lagerStatusNskes' => 'Lager Status ønskes',
-        'varetype' => 'Varetype'
+        'color' => 'Color',
+        'size' => 'Size'
     ];
 
 
@@ -124,7 +126,8 @@ class Product implements ArrayAccess
         'avanceIKr' => 'setAvanceIKr',
         'iDVaregruppe' => 'setIDVaregruppe',
         'lagerStatusNskes' => 'setLagerStatusNskes',
-        'varetype' => 'setVaretype'
+        'color' => 'setColor',
+        'size' => 'setSize'
     ];
 
 
@@ -145,7 +148,8 @@ class Product implements ArrayAccess
         'avanceIKr' => 'getAvanceIKr',
         'iDVaregruppe' => 'getIDVaregruppe',
         'lagerStatusNskes' => 'getLagerStatusNskes',
-        'varetype' => 'getVaretype'
+        'color' => 'getColor',
+        'size' => 'getSize'
     ];
 
     public static function attributeMap()
@@ -191,7 +195,8 @@ class Product implements ArrayAccess
         $this->container['avanceIKr'] = isset($data['avanceIKr']) ? $data['avanceIKr'] : null;
         $this->container['iDVaregruppe'] = isset($data['iDVaregruppe']) ? $data['iDVaregruppe'] : null;
         $this->container['lagerStatusNskes'] = isset($data['lagerStatusNskes']) ? $data['lagerStatusNskes'] : null;
-        $this->container['varetype'] = isset($data['varetype']) ? $data['varetype'] : null;
+        $this->container['color'] = isset($data['color']) ? $data['color'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -470,22 +475,43 @@ class Product implements ArrayAccess
     }
 
     /**
-     * Gets varetype
+     * Gets color
      * @return string
      */
-    public function getVaretype()
+    public function getColor()
     {
-        return $this->container['varetype'];
+        return $this->container['color'];
     }
 
     /**
-     * Sets varetype
-     * @param string $varetype always set to indkøb
+     * Sets color
+     * @param string $color Color
      * @return $this
      */
-    public function setVaretype($varetype)
+    public function setColor($color)
     {
-        $this->container['varetype'] = $varetype;
+        $this->container['color'] = $color;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     * @return string
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     * @param string $size Color
+     * @return $this
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }
