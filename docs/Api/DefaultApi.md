@@ -31,16 +31,21 @@ Creates a new Delivery
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\DeliveryObject(); // \iPOS\Model\DeliveryObject | Record to be created
 
 try {
-    $result = $api_instance->createDelivery($strService, $data);
+    $result = $apiInstance->createDelivery($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->createDelivery: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +58,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\DeliveryObject**](../Model/\iPOS\Model\DeliveryObject.md)| Record to be created | [optional]
+ **data** | [**\iPOS\Model\DeliveryObject**](../Model/DeliveryObject.md)| Record to be created | [optional]
 
 ### Return type
 
@@ -81,16 +86,21 @@ Creates a new Delivery Line
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\DeliveryLineObject(); // \iPOS\Model\DeliveryLineObject | Record to be created
 
 try {
-    $result = $api_instance->createDeliveryLine($strService, $data);
+    $result = $apiInstance->createDeliveryLine($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->createDeliveryLine: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +113,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\DeliveryLineObject**](../Model/\iPOS\Model\DeliveryLineObject.md)| Record to be created | [optional]
+ **data** | [**\iPOS\Model\DeliveryLineObject**](../Model/DeliveryLineObject.md)| Record to be created | [optional]
 
 ### Return type
 
@@ -131,16 +141,21 @@ Creates a new product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\ProductObject(); // \iPOS\Model\ProductObject | Record to be created
 
 try {
-    $result = $api_instance->createProduct($strService, $data);
+    $result = $apiInstance->createProduct($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->createProduct: ', $e->getMessage(), PHP_EOL;
@@ -153,7 +168,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\ProductObject**](../Model/\iPOS\Model\ProductObject.md)| Record to be created | [optional]
+ **data** | [**\iPOS\Model\ProductObject**](../Model/ProductObject.md)| Record to be created | [optional]
 
 ### Return type
 
@@ -181,16 +196,21 @@ Creates a new product type
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\ProductTypeObject(); // \iPOS\Model\ProductTypeObject | Record to be created
 
 try {
-    $result = $api_instance->createProductType($strService, $data);
+    $result = $apiInstance->createProductType($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->createProductType: ', $e->getMessage(), PHP_EOL;
@@ -203,7 +223,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\ProductTypeObject**](../Model/\iPOS\Model\ProductTypeObject.md)| Record to be created | [optional]
+ **data** | [**\iPOS\Model\ProductTypeObject**](../Model/ProductTypeObject.md)| Record to be created | [optional]
 
 ### Return type
 
@@ -231,16 +251,21 @@ finds a product based on its EAN code
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\ProductSearchObject(); // \iPOS\Model\ProductSearchObject | Search data
 
 try {
-    $result = $api_instance->findProductByEAN($strService, $data);
+    $result = $apiInstance->findProductByEAN($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->findProductByEAN: ', $e->getMessage(), PHP_EOL;
@@ -253,7 +278,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\ProductSearchObject**](../Model/\iPOS\Model\ProductSearchObject.md)| Search data | [optional]
+ **data** | [**\iPOS\Model\ProductSearchObject**](../Model/ProductSearchObject.md)| Search data | [optional]
 
 ### Return type
 
@@ -281,16 +306,21 @@ finds a product type based on its Id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\ProductTypeSearchObject(); // \iPOS\Model\ProductTypeSearchObject | Search data
 
 try {
-    $result = $api_instance->findProductType($strService, $data);
+    $result = $apiInstance->findProductType($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->findProductType: ', $e->getMessage(), PHP_EOL;
@@ -303,7 +333,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\ProductTypeSearchObject**](../Model/\iPOS\Model\ProductTypeSearchObject.md)| Search data | [optional]
+ **data** | [**\iPOS\Model\ProductTypeSearchObject**](../Model/ProductTypeSearchObject.md)| Search data | [optional]
 
 ### Return type
 
@@ -331,16 +361,21 @@ finds sales reports
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\SalesReportSearchObject(); // \iPOS\Model\SalesReportSearchObject | Search data
 
 try {
-    $result = $api_instance->findSalesReports($strService, $data);
+    $result = $apiInstance->findSalesReports($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->findSalesReports: ', $e->getMessage(), PHP_EOL;
@@ -353,7 +388,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\SalesReportSearchObject**](../Model/\iPOS\Model\SalesReportSearchObject.md)| Search data | [optional]
+ **data** | [**\iPOS\Model\SalesReportSearchObject**](../Model/SalesReportSearchObject.md)| Search data | [optional]
 
 ### Return type
 
@@ -381,17 +416,22 @@ retrieves all product types
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $offset = "offset_example"; // string | 
 $range = "range_example"; // string | 
 
 try {
-    $result = $api_instance->getAllProductTypes($strService, $offset, $range);
+    $result = $apiInstance->getAllProductTypes($strService, $offset, $range);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getAllProductTypes: ', $e->getMessage(), PHP_EOL;
@@ -433,17 +473,22 @@ retrieves all products
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $offset = "offset_example"; // string | 
 $range = "range_example"; // string | 
 
 try {
-    $result = $api_instance->getAllProducts($strService, $offset, $range);
+    $result = $apiInstance->getAllProducts($strService, $offset, $range);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getAllProducts: ', $e->getMessage(), PHP_EOL;
@@ -484,12 +529,16 @@ gets an authentication token (valid for 15 minutes)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $data = new \iPOS\Model\AuthenticationObject(); // \iPOS\Model\AuthenticationObject | Connecting data
 
 try {
-    $result = $api_instance->getDataToken($strService, $data);
+    $result = $apiInstance->getDataToken($strService, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getDataToken: ', $e->getMessage(), PHP_EOL;
@@ -502,7 +551,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
- **data** | [**\iPOS\Model\AuthenticationObject**](../Model/\iPOS\Model\AuthenticationObject.md)| Connecting data | [optional]
+ **data** | [**\iPOS\Model\AuthenticationObject**](../Model/AuthenticationObject.md)| Connecting data | [optional]
 
 ### Return type
 
@@ -530,16 +579,21 @@ retrieves a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $iRecordID = 56; // int | FileMaker record id
 
 try {
-    $result = $api_instance->getProduct($strService, $iRecordID);
+    $result = $apiInstance->getProduct($strService, $iRecordID);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getProduct: ', $e->getMessage(), PHP_EOL;
@@ -580,16 +634,21 @@ retrieves a Sales Report line
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $iRecordID = 56; // int | FileMaker record id
 
 try {
-    $result = $api_instance->getSaleReport($strService, $iRecordID);
+    $result = $apiInstance->getSaleReport($strService, $iRecordID);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getSaleReport: ', $e->getMessage(), PHP_EOL;
@@ -630,17 +689,22 @@ Marks a Sales Report line as Read
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $iRecordID = 56; // int | FileMaker record id
 $data = new \iPOS\Model\SalesReportObject(); // \iPOS\Model\SalesReportObject | 
 
 try {
-    $result = $api_instance->markSalesReportAsRead($strService, $iRecordID, $data);
+    $result = $apiInstance->markSalesReportAsRead($strService, $iRecordID, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->markSalesReportAsRead: ', $e->getMessage(), PHP_EOL;
@@ -654,7 +718,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
  **iRecordID** | **int**| FileMaker record id |
- **data** | [**\iPOS\Model\SalesReportObject**](../Model/\iPOS\Model\SalesReportObject.md)|  | [optional]
+ **data** | [**\iPOS\Model\SalesReportObject**](../Model/SalesReportObject.md)|  | [optional]
 
 ### Return type
 
@@ -682,17 +746,22 @@ Updates a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
+$config = iPOS\Configuration::getDefaultConfiguration()->setApiKey('FM-data-token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
+// $config = iPOS\Configuration::getDefaultConfiguration()->setApiKeyPrefix('FM-data-token', 'Bearer');
 
-$api_instance = new iPOS\Api\DefaultApi();
+$apiInstance = new iPOS\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $strService = "strService_example"; // string | Target Service in FileMaker
 $iRecordID = 56; // int | FileMaker record id
 $data = new \iPOS\Model\ProductObject(); // \iPOS\Model\ProductObject | 
 
 try {
-    $result = $api_instance->updateProduct($strService, $iRecordID, $data);
+    $result = $apiInstance->updateProduct($strService, $iRecordID, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->updateProduct: ', $e->getMessage(), PHP_EOL;
@@ -706,7 +775,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **strService** | **string**| Target Service in FileMaker |
  **iRecordID** | **int**| FileMaker record id |
- **data** | [**\iPOS\Model\ProductObject**](../Model/\iPOS\Model\ProductObject.md)|  | [optional]
+ **data** | [**\iPOS\Model\ProductObject**](../Model/ProductObject.md)|  | [optional]
 
 ### Return type
 

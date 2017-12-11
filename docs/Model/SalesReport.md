@@ -11,6 +11,10 @@ Name | Type | Description | Notes
 **sPYRelevant** | **string** |  | [optional] 
 **sPYDone** | **string** |  | [optional] 
 **idLokation** | **string** |  | [optional] 
+**taxStateAmount** | **string** |  | [optional] 
+**taxCiyAmount** | **string** |  | [optional] 
+**taxStateRate** | **string** |  | [optional] 
+**taxCityRate** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
