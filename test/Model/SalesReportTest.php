@@ -142,7 +142,7 @@ class SalesReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "taxCiyAmount"
+     * Test attribute "taxCityAmount"
      */
     public function testPropertyTaxCiyAmount()
     {

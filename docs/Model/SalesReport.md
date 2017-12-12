@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **sPYDone** | **string** |  | [optional] 
 **idLokation** | **string** |  | [optional] 
 **taxStateAmount** | **string** |  | [optional] 
-**taxCiyAmount** | **string** |  | [optional] 
+**taxCityAmount** | **string** |  | [optional] 
 **taxStateRate** | **string** |  | [optional] 
 **taxCityRate** | **string** |  | [optional] 
 

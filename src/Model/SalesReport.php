@@ -65,7 +65,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'string',
         'idLokation' => 'string',
         'taxStateAmount' => 'string',
-        'taxCiyAmount' => 'string',
+        'taxCityAmount' => 'string',
         'taxStateRate' => 'string',
         'taxCityRate' => 'string'
     ];
@@ -85,7 +85,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => null,
         'idLokation' => null,
         'taxStateAmount' => null,
-        'taxCiyAmount' => null,
+        'taxCityAmount' => null,
         'taxStateRate' => null,
         'taxCityRate' => null
     ];
@@ -126,7 +126,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'SPY_done',
         'idLokation' => 'id_lokation',
         'taxStateAmount' => 'tax_state_amount',
-        'taxCiyAmount' => 'tax_ciy_amount',
+        'taxCityAmount' => 'tax_city_amount',
         'taxStateRate' => 'tax_state_rate',
         'taxCityRate' => 'tax_city_rate'
     ];
@@ -146,7 +146,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'setSPYDone',
         'idLokation' => 'setIdLokation',
         'taxStateAmount' => 'setTaxStateAmount',
-        'taxCiyAmount' => 'setTaxCiyAmount',
+        'taxCityAmount' => 'setTaxCiyAmount',
         'taxStateRate' => 'setTaxStateRate',
         'taxCityRate' => 'setTaxCityRate'
     ];
@@ -166,7 +166,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'getSPYDone',
         'idLokation' => 'getIdLokation',
         'taxStateAmount' => 'getTaxStateAmount',
-        'taxCiyAmount' => 'getTaxCiyAmount',
+        'taxCityAmount' => 'getTaxCiyAmount',
         'taxStateRate' => 'getTaxStateRate',
         'taxCityRate' => 'getTaxCityRate'
     ];
@@ -240,7 +240,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         $this->container['sPYDone'] = isset($data['sPYDone']) ? $data['sPYDone'] : null;
         $this->container['idLokation'] = isset($data['idLokation']) ? $data['idLokation'] : null;
         $this->container['taxStateAmount'] = isset($data['taxStateAmount']) ? $data['taxStateAmount'] : null;
-        $this->container['taxCiyAmount'] = isset($data['taxCiyAmount']) ? $data['taxCiyAmount'] : null;
+        $this->container['taxCityAmount'] = isset($data['taxCityAmount']) ? $data['taxCityAmount'] : null;
         $this->container['taxStateRate'] = isset($data['taxStateRate']) ? $data['taxStateRate'] : null;
         $this->container['taxCityRate'] = isset($data['taxCityRate']) ? $data['taxCityRate'] : null;
     }
@@ -487,25 +487,25 @@ class SalesReport implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets taxCiyAmount
+     * Gets taxCityAmount
      *
      * @return string
      */
     public function getTaxCiyAmount()
     {
-        return $this->container['taxCiyAmount'];
+        return $this->container['taxCityAmount'];
     }
 
     /**
-     * Sets taxCiyAmount
+     * Sets taxCityAmount
      *
-     * @param string $taxCiyAmount taxCiyAmount
+     * @param string $taxCityAmount taxCityAmount
      *
      * @return $this
      */
-    public function setTaxCiyAmount($taxCiyAmount)
+    public function setTaxCiyAmount($taxCityAmount)
     {
-        $this->container['taxCiyAmount'] = $taxCiyAmount;
+        $this->container['taxCityAmount'] = $taxCityAmount;
 
         return $this;
     }
