@@ -146,7 +146,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'setSPYDone',
         'idLokation' => 'setIdLokation',
         'taxStateAmount' => 'setTaxStateAmount',
-        'taxCityAmount' => 'setTaxCiyAmount',
+        'taxCityAmount' => 'setTaxCityAmount',
         'taxStateRate' => 'setTaxStateRate',
         'taxCityRate' => 'setTaxCityRate'
     ];
@@ -166,7 +166,7 @@ class SalesReport implements ModelInterface, ArrayAccess
         'sPYDone' => 'getSPYDone',
         'idLokation' => 'getIdLokation',
         'taxStateAmount' => 'getTaxStateAmount',
-        'taxCityAmount' => 'getTaxCiyAmount',
+        'taxCityAmount' => 'getTaxCityAmount',
         'taxStateRate' => 'getTaxStateRate',
         'taxCityRate' => 'getTaxCityRate'
     ];
@@ -491,7 +491,7 @@ class SalesReport implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTaxCiyAmount()
+    public function getTaxCityAmount()
     {
         return $this->container['taxCityAmount'];
     }
@@ -503,7 +503,7 @@ class SalesReport implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTaxCiyAmount($taxCityAmount)
+    public function setTaxCityAmount($taxCityAmount)
     {
         $this->container['taxCityAmount'] = $taxCityAmount;
 

@@ -175,4 +175,25 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     public function testPropertySize()
     {
     }
+
+    /**
+     * Test attribute "momsSats"
+     */
+    public function testPropertyMomsSats()
+    {
+    }
+
+    /**
+     * Test attribute "saeson"
+     */
+    public function testPropertySaeson()
+    {
+    }
+
+    /**
+     * Test attribute "producentNavn"
+     */
+    public function testPropertyProducentNavn()
+    {
+    }
 }

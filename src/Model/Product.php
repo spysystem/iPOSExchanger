@@ -69,7 +69,10 @@ class Product implements ModelInterface, ArrayAccess
         'iDVaregruppe' => 'string',
         'lagerStatusNskes' => 'string',
         'color' => 'string',
-        'size' => 'string'
+        'size' => 'string',
+        'momsSats' => 'string',
+        'saeson' => 'string',
+        'producentNavn' => 'string'
     ];
 
     /**
@@ -91,7 +94,10 @@ class Product implements ModelInterface, ArrayAccess
         'iDVaregruppe' => null,
         'lagerStatusNskes' => null,
         'color' => null,
-        'size' => null
+        'size' => null,
+        'momsSats' => null,
+        'saeson' => null,
+        'producentNavn' => null
     ];
 
     /**
@@ -134,7 +140,10 @@ class Product implements ModelInterface, ArrayAccess
         'iDVaregruppe' => 'ID_varegruppe',
         'lagerStatusNskes' => 'Lager Status ønskes',
         'color' => 'Color',
-        'size' => 'Size'
+        'size' => 'Size',
+        'momsSats' => 'Moms_sats',
+        'saeson' => 'Saeson',
+        'producentNavn' => 'Producent_navn'
     ];
 
     /**
@@ -156,7 +165,10 @@ class Product implements ModelInterface, ArrayAccess
         'iDVaregruppe' => 'setIDVaregruppe',
         'lagerStatusNskes' => 'setLagerStatusNskes',
         'color' => 'setColor',
-        'size' => 'setSize'
+        'size' => 'setSize',
+        'momsSats' => 'setMomsSats',
+        'saeson' => 'setSaeson',
+        'producentNavn' => 'setProducentNavn'
     ];
 
     /**
@@ -178,7 +190,10 @@ class Product implements ModelInterface, ArrayAccess
         'iDVaregruppe' => 'getIDVaregruppe',
         'lagerStatusNskes' => 'getLagerStatusNskes',
         'color' => 'getColor',
-        'size' => 'getSize'
+        'size' => 'getSize',
+        'momsSats' => 'getMomsSats',
+        'saeson' => 'getSaeson',
+        'producentNavn' => 'getProducentNavn'
     ];
 
     /**
@@ -255,6 +270,9 @@ class Product implements ModelInterface, ArrayAccess
         $this->container['lagerStatusNskes'] = isset($data['lagerStatusNskes']) ? $data['lagerStatusNskes'] : null;
         $this->container['color'] = isset($data['color']) ? $data['color'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['momsSats'] = isset($data['momsSats']) ? $data['momsSats'] : null;
+        $this->container['saeson'] = isset($data['saeson']) ? $data['saeson'] : null;
+        $this->container['producentNavn'] = isset($data['producentNavn']) ? $data['producentNavn'] : null;
     }
 
     /**
@@ -607,13 +625,85 @@ class Product implements ModelInterface, ArrayAccess
     /**
      * Sets size
      *
-     * @param string $size Color
+     * @param string $size Size
      *
      * @return $this
      */
     public function setSize($size)
     {
         $this->container['size'] = $size;
+
+        return $this;
+    }
+
+    /**
+     * Gets momsSats
+     *
+     * @return string
+     */
+    public function getMomsSats()
+    {
+        return $this->container['momsSats'];
+    }
+
+    /**
+     * Sets momsSats
+     *
+     * @param string $momsSats VAT
+     *
+     * @return $this
+     */
+    public function setMomsSats($momsSats)
+    {
+        $this->container['momsSats'] = $momsSats;
+
+        return $this;
+    }
+
+    /**
+     * Gets saeson
+     *
+     * @return string
+     */
+    public function getSaeson()
+    {
+        return $this->container['saeson'];
+    }
+
+    /**
+     * Sets saeson
+     *
+     * @param string $saeson Season
+     *
+     * @return $this
+     */
+    public function setSaeson($saeson)
+    {
+        $this->container['saeson'] = $saeson;
+
+        return $this;
+    }
+
+    /**
+     * Gets producentNavn
+     *
+     * @return string
+     */
+    public function getProducentNavn()
+    {
+        return $this->container['producentNavn'];
+    }
+
+    /**
+     * Sets producentNavn
+     *
+     * @param string $producentNavn Brand
+     *
+     * @return $this
+     */
+    public function setProducentNavn($producentNavn)
+    {
+        $this->container['producentNavn'] = $producentNavn;
 
         return $this;
     }

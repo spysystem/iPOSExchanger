@@ -16,7 +16,10 @@ Name | Type | Description | Notes
 **iDVaregruppe** | **string** | Spy Group ID | [optional] 
 **lagerStatusNskes** | **string** | Always set to 1 | [optional] 
 **color** | **string** | Color | [optional] 
-**size** | **string** | Color | [optional] 
+**size** | **string** | Size | [optional] 
+**momsSats** | **string** | VAT | [optional] 
+**saeson** | **string** | Season | [optional] 
+**producentNavn** | **string** | Brand | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
