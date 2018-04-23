@@ -59,7 +59,8 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         'idVaremodtagelse' => 'string',
         'idVare' => 'string',
         'antalModtaget' => 'string',
-        'eAN' => 'string'
+        'eAN' => 'string',
+        'kosprisNu' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         'idVaremodtagelse' => null,
         'idVare' => null,
         'antalModtaget' => null,
-        'eAN' => null
+        'eAN' => null,
+        'kosprisNu' => null
     ];
 
     /**
@@ -104,7 +106,8 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         'idVaremodtagelse' => 'id_varemodtagelse',
         'idVare' => 'id_vare',
         'antalModtaget' => 'Antal_modtaget',
-        'eAN' => 'EAN'
+        'eAN' => 'EAN',
+        'kosprisNu' => 'Kospris_nu'
     ];
 
     /**
@@ -116,7 +119,8 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         'idVaremodtagelse' => 'setIdVaremodtagelse',
         'idVare' => 'setIdVare',
         'antalModtaget' => 'setAntalModtaget',
-        'eAN' => 'setEAN'
+        'eAN' => 'setEAN',
+        'kosprisNu' => 'setKosprisNu'
     ];
 
     /**
@@ -128,7 +132,8 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         'idVaremodtagelse' => 'getIdVaremodtagelse',
         'idVare' => 'getIdVare',
         'antalModtaget' => 'getAntalModtaget',
-        'eAN' => 'getEAN'
+        'eAN' => 'getEAN',
+        'kosprisNu' => 'getKosprisNu'
     ];
 
     /**
@@ -195,6 +200,7 @@ class DeliveryLine implements ModelInterface, ArrayAccess
         $this->container['idVare'] = isset($data['idVare']) ? $data['idVare'] : null;
         $this->container['antalModtaget'] = isset($data['antalModtaget']) ? $data['antalModtaget'] : null;
         $this->container['eAN'] = isset($data['eAN']) ? $data['eAN'] : null;
+        $this->container['kosprisNu'] = isset($data['kosprisNu']) ? $data['kosprisNu'] : null;
     }
 
     /**
@@ -314,6 +320,30 @@ class DeliveryLine implements ModelInterface, ArrayAccess
     public function setEAN($eAN)
     {
         $this->container['eAN'] = $eAN;
+
+        return $this;
+    }
+
+    /**
+     * Gets kosprisNu
+     *
+     * @return string
+     */
+    public function getKosprisNu()
+    {
+        return $this->container['kosprisNu'];
+    }
+
+    /**
+     * Sets kosprisNu
+     *
+     * @param string $kosprisNu kosprisNu
+     *
+     * @return $this
+     */
+    public function setKosprisNu($kosprisNu)
+    {
+        $this->container['kosprisNu'] = $kosprisNu;
 
         return $this;
     }

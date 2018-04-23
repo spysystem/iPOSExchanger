@@ -105,4 +105,11 @@ class DeliveryLineTest extends \PHPUnit_Framework_TestCase
     public function testPropertyEAN()
     {
     }
+
+    /**
+     * Test attribute "kosprisNu"
+     */
+    public function testPropertyKosprisNu()
+    {
+    }
 }
